@@ -19,6 +19,10 @@ $userId = @$_GET['userId'];//request from this user ID
 $projectId = @$_GET['projectId'];
 $custom = @$_GET['custom'];
 
+//url decode
+$from = urldecode($from);
+$to = urldecode($to);
+$custom = urldecode($custom);
 
 //test routing
 $toInt = (int) $to;
