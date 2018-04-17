@@ -14,15 +14,15 @@ HEADER:
 
 PAYLOAD:
 	{
-	  "jti": "SK9387c378e0092f6deb93f28824f74403-1497503680",//JWT ID
-	  "iss": "SK9387c378e0092f6deb93f28824f74403",//API Key SID
+	  "jti": "SK...-1497503680",//JWT ID
+	  "iss": "SK...",//API Key SID
 	  "exp": 1497507280,//Expiration Time
 	  "userId": "huydn-123456"
 	}
 */
 
-$apiKeySid = 'SK9387c378e0092f6deb93f28824f74403';
-$apiKeySecret = "tXS2Ll52Y2rVZt33JGLw8Wuq0xH8tLYd";
+$apiKeySid = 'YOUR_API_KEY_SID';
+$apiKeySecret = "YOUR_API_KEY_SECRET";
 
 $now = time();
 $exp = $now + 3600;
