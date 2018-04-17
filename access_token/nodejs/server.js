@@ -7,8 +7,8 @@ var server = http.createServer(function (request, response) {
 		"Context-type": "text/plain"
 	});
 	
-	var apiKeySid = 'SKGXYxF2kj4GG8DX3NFC7VICQAcybSJ9';
-	var apiKeySecret = "TVRDVEVsZ0hxbDZnSUFtbDhTR0JMNDhWQWhoSFd4Ynk=";
+	var apiKeySid = 'YOUR_API_KEY_SID';
+	var apiKeySecret = "YOUR_API_KEY_SECRET";
 	var now = Math.floor(Date.now() / 1000);
 	var exp = now + 3600;
 	
