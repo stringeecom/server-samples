@@ -11,9 +11,9 @@ $url = 'https://api.stringee.com/v1/sms';
 
 //=======================
 $smses[] = array(
-	'from' => 'Stringee',
-	'text' => 'Xin chao, day la tin nhan gui tu Stringee',
-	'to' => '84909982668',
+	'from' => 'YOUR_BRANDNAME',
+	'to' => 'CLIENT_NUMBER',
+	'text' => 'CONTENT_SMS',
 );
 
 $data = array(

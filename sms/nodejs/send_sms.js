@@ -1,4 +1,4 @@
-var http = require('http');
+var https = require('https');
 
 const apiKeySid = 'YOUR_API_KEY_SID';
 const apiKeySecret = "YOUR_API_KEY_SECRET";
@@ -34,7 +34,7 @@ function getAccessToken() {
 function sendSMS(sms) {
 	var options = {
 		hostname: 'api.stringee.com',
-		port: 80,
+		port: 43,
 		path: '/v1/sms',
 		method: 'POST',
 		headers: {
@@ -51,7 +51,7 @@ function sendSMS(sms) {
 	);
 
 
-	var req = http.request(options, function (res) {
+	var req = https.request(options, function (res) {
 		console.log('STATUS:', res.statusCode);
 		console.log('HEADERS:', JSON.stringify(res.headers));
 		res.setEncoding('utf8');
