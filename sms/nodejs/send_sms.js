@@ -34,7 +34,7 @@ function getAccessToken() {
 function sendSMS(sms) {
 	var options = {
 		hostname: 'api.stringee.com',
-		port: 43,
+		port: 443,
 		path: '/v1/sms',
 		method: 'POST',
 		headers: {
