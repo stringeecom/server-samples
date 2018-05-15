@@ -2,8 +2,8 @@
 
 include_once './StringeeApi/StringeeCurlClient.php';
 
-$keySid = '';
-$keySecret = '';
+$keySid = 'YOUR_API_KEY_SID';
+$keySecret = 'YOUR_API_KEY_SECRET';
 
 $curlClient = new StringeeCurlClient($keySid, $keySecret);
 
