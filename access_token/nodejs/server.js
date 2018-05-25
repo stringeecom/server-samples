@@ -1,38 +1,22 @@
-var http = require('http');
-var fs = require('fs');
+const apiKeySid = 'YOUR_API_KEY_SID';
+const apiKeySecret = "YOUR_API_KEY_SECRET";
 
-var server = http.createServer(function (request, response) {
+var token = getAccessToken();
+console.log(token);
 
-	response.writeHead(200, {
-		"Context-type": "text/plain"
-	});
-	
-	var apiKeySid = 'YOUR_API_KEY_SID';
-	var apiKeySecret = "YOUR_API_KEY_SECRET";
+
+function getAccessToken() {
 	var now = Math.floor(Date.now() / 1000);
 	var exp = now + 3600;
-	
-	var userId = 'YOUR_USER_ID';
-	
+
 	var header = {cty: "stringee-api;v=1"};
 	var payload = {
 		jti: apiKeySid + "-" + now,
 		iss: apiKeySid,
-		exp: exp,
-		userId: userId
+		exp: exp
 	};
-	
+
 	var jwt = require('jsonwebtoken');
-	var token = jwt.sign(payload, apiKeySecret, {algorithm : 'HS256', header: header})
-	response.write('TOKEN: ' + token);
-	response.end();
-});
-
-server.listen(3000, function () {
-	console.log('Connected Successfull');
-})
-
-
-
-
-
+	var token = jwt.sign(payload, apiKeySecret, {algorithm: 'HS256', header: header})
+	return token;
+}
