@@ -12,20 +12,23 @@ $url = 'https://api.stringee.com/v1/sms';
 
 
 /*============================================*/
-/*
-	'text' is string if you use brandname Stringee or your brandname
-	'text' is array if you use brandname Notify-GSMS-VSMS:
-		array(
-		  'template' => 5689, //template code
-		  'params' => ['123456789'] //list params
-		)
-*/
-
 $smses[] = array(
 	'from' => 'YOUR_BRANDNAME', 
 	'to' => 'CLIENT_NUMBER',
 	'text' => 'CONTENT_SMS',	
 );
+
+/*
+ * $sms['text'] is string if you use brandname Stringee or your brandname
+	"text" => "CONTENT_SMS"
+ * 
+ * $sms['text'] is array if you use brandname Notify-GSMS-VSMS:
+	"text" => [
+				"template" => 5689, 
+				"params" => ["param1"]
+			]
+*/
+
 
 $data = array(
 	'sms' => $smses,

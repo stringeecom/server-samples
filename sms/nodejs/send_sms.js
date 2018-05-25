@@ -10,6 +10,17 @@ var sms = [
 		"text": "CONTENT_SMS"
 	}
 ]
+/*
+ * 'text' is string if you use brandname Stringee or your brandname
+		"text": "CONTENT_SMS"
+
+ * 'text' is array if you use brandname Notify-GSMS-VSMS:
+		"text": {
+					"template": 5689, 
+					"params": ["param1"]
+				}
+*/
+
 sendSMS(sms)
 
 
