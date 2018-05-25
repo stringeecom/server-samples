@@ -9,17 +9,28 @@ $curlClient = new StringeeCurlClient($keySid, $keySecret);
 
 $url = 'https://api.stringee.com/v1/sms';
 
-//=======================
+
+
+/*============================================*/
+/*
+	'text' is string if you use brandname Stringee or your brandname
+	'text' is array if you use brandname Notify-GSMS-VSMS:
+		array(
+		  'template' => 5689, //template code
+		  'params' => ['123456789'] //list params
+		)
+*/
+
 $smses[] = array(
-	'from' => 'YOUR_BRANDNAME',
+	'from' => 'YOUR_BRANDNAME', 
 	'to' => 'CLIENT_NUMBER',
-	'text' => 'CONTENT_SMS',
+	'text' => 'CONTENT_SMS',	
 );
 
 $data = array(
 	'sms' => $smses,
 );
-//=======================
+/*============================================*/
 
 $postData = json_encode($data);
 $res = $curlClient->post($url, $postData, 15);
