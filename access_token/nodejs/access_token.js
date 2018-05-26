@@ -1,5 +1,6 @@
 const apiKeySid = 'YOUR_API_KEY_SID';
 const apiKeySecret = "YOUR_API_KEY_SECRET";
+const userId = 'YOUR_USER_ID';
 
 var token = getAccessToken();
 console.log(token);
@@ -13,7 +14,8 @@ function getAccessToken() {
 	var payload = {
 		jti: apiKeySid + "-" + now,
 		iss: apiKeySid,
-		exp: exp
+		exp: exp,
+		userId: userId
 	};
 
 	var jwt = require('jsonwebtoken');
