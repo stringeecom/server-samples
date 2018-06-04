@@ -40,7 +40,8 @@ class StringeeCurlClient {
 		$payload = array(
 			'jti' => $this->_keySid . '-' . $now,
 			'iss' => $this->_keySid,
-			'exp' => $exp
+			'exp' => $exp,
+			'rest_api' => true
 		);
 
 		$token = JWT::encode($payload, $this->_keySecret, 'HS256', null, $header);
