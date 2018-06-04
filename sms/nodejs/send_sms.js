@@ -33,7 +33,8 @@ function getAccessToken() {
 	var payload = {
 		jti: apiKeySid + "-" + now,
 		iss: apiKeySid,
-		exp: exp
+		exp: exp,
+		rest_api: 1
 	};
 
 	var jwt = require('jsonwebtoken');
