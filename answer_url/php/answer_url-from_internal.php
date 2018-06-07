@@ -36,7 +36,6 @@ if($toInt < 60000){
 
 $scco = '[{
 			"action": "connect",
-			"eventUrl": ["https://example.com/events"],
 
 			"from": {
 				"type": "internal",

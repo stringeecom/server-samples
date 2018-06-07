@@ -23,7 +23,6 @@ $from = '0909982888';
 
 $scco = '[{
 			"action": "connect",
-			"eventUrl": ["https://example.com/events"],
 			"from": {
 				"type": "external",
 				"number": "' . $from . '",
