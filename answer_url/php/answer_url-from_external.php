@@ -11,15 +11,19 @@
 
 */
 
+$userId = @$_GET['userId'];
+
 $from = @$_GET['from'];
 $to = @$_GET['to'];
 $fromInternal = @$_GET['fromInternal'];
 $uuid = @$_GET['uuid'];
 
 
-$callTo = '5001';
-
-$from = '0909982888';
+if($userId){
+        $callTo = $userId;
+}else{
+        $callTo = 'USER_ID';
+}
 
 $scco = '[{
 			"action": "connect",
@@ -31,7 +35,7 @@ $scco = '[{
 			"to": {
 				"type": "internal",
 				"number": "' . $callTo . '",
-				"alias": "' . $callTo . '"
+				"alias": "' . $to . '"
 			}
 		}]';
 
