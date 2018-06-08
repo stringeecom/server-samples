@@ -27,16 +27,20 @@ if($userId){
 
 $scco = '[{
 			"action": "connect",
+
 			"from": {
 				"type": "external",
 				"number": "' . $from . '",
 				"alias": "' . $from . '"
 			},
+
 			"to": {
 				"type": "internal",
 				"number": "' . $callTo . '",
 				"alias": "' . $to . '"
-			}
+			},
+
+			"customData": "test-custom-data"
 		}]';
 
 header('Content-Type: application/json');

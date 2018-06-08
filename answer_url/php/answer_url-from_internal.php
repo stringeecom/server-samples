@@ -47,8 +47,9 @@ $scco = '[{
 				"type": "' . $toType . '",
 				"number": "' . $to . '",
 				"alias": "' . $to . '"
-			}
+			},
 
+			"customData": "test-custom-data"
 		}]';
 
 header('Content-Type: application/json');
