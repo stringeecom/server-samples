@@ -14,8 +14,8 @@ $url = 'http://api.stringee.com/v1/call2/callout';
 $data = '{
     "from": {
         "type": "external",
-        "number": "YOUR_STRINEE_NUMBER",
-        "alias": "YOUR_STRINEE_NUMBER"
+        "number": "YOUR_STRINGEE_NUMBER",
+        "alias": "YOUR_STRINGEE_NUMBER"
     },
     
     "to": [{
