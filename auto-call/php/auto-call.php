@@ -24,11 +24,23 @@ $data = '{
         "alias": "CALL_TO_NUMBER"
     }],
    
-    "actions": [{
-        "action": "talk",
-        "text": "       Stringee kính chào quý khách, đây là cuộc gọi tự động, vui lòng liên hệ với chúng tôi qua info@stringee.com",
-        "voice": "hn_male_xuantin_vdts_48k-hsmm"
-    }]
+    "actions": [
+        {
+            "action": "talk",
+            "text": "       Stringee kính chào quý khách, đây là cuộc gọi tự động, vui lòng liên hệ với chúng tôi qua info@stringee.com hoặc nhấn phím bất kỳ để gặp bộ phận kinh doanh của Stringee",
+            "voice": "hn_male_xuantin_vdts_48k-hsmm",
+            "bargeIn": true,
+            "loop": 5
+        },
+        {
+            "action": "input",
+            "eventUrl": "https://example.com/event_url_dtmf.php",
+            "submitOnHash": "false",
+            "timeout": "15"
+        },
+
+
+    ]
 }';
 
 $resJson = $curlClient->post($url, $data, 15);
