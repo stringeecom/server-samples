@@ -2,9 +2,6 @@
 
 include './StringeeApi/StringeeCurlClient.php';
 
-global $config;
-
-
 $keySid = 'YOUR_KEY_SID';
 $keySecret = 'YOUR_KEY_SECRET';
 
