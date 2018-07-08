@@ -1,5 +1,5 @@
 const apiKeySid = 'YOUR_API_KEY_SID';
-const apiKeySecret = "YOUR_API_KEY_SECRET";
+const apiKeySecret = 'YOUR_API_KEY_SECRET';
 const userId = 'YOUR_USER_ID';
 
 var token = getAccessToken();
