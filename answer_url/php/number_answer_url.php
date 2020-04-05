@@ -46,3 +46,23 @@ $scco = '[{
 header('Content-Type: application/json');
 echo $scco;
 
+
+/* 
+	$signing_secret_key = 'YOUR_SIGNING_SECRET_KEY';
+	$requestUri = $_SERVER['REQUEST_URI'];
+	$signature = @$_SERVER['HTTP_X_STRINGEE_SIGNATURE'];
+
+	function computeSignature($data, $signing_secret_key) {
+		$hmac = hash_hmac("sha1", $data, $signing_secret_key, true);
+		return base64_encode($hmac);
+	}
+
+	$requestUri = str_replace (' ', '%20', $requestUri);
+	$computedSignature = computeSignature($requestUri, $signing_secret_key);
+	if($computedSignature == $signature){
+		error_log('Confirmed to have come from Stringee');
+	} else {
+		error_log('SIGNATURE NOT VALID. It might have been spoofed');
+	}
+*/
+
